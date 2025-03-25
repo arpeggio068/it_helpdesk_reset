@@ -12,7 +12,7 @@ var gId, gData, gUrl;
     })
     .then(data => {
       if(data.data.length > 0){
-        gData = data.data[0]
+        gData = data.data
         gId = gData[4]
         console.log(gId);
       }
