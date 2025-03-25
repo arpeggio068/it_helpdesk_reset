@@ -27,7 +27,7 @@ var gId, gData, gUrl;
         
         console.log('data not found')
         setTimeout(function(){
-          window.location.href = "/"
+          window.location.href = "https://arpeggio068.github.io/it_helpdesk_reset/"
         },5000)
       }      
       
@@ -142,7 +142,7 @@ var gId, gData, gUrl;
         hideSpin3()
         removeValidate();
         setTimeout(function(){
-          window.location.href = "/"
+          window.location.href = "https://arpeggio068.github.io/it_helpdesk_reset/"
         },5000)
         
     });
