@@ -23,16 +23,16 @@
 
             <div class="row my-3">                    
                 <div class="col">
-                    <input id="pwd1" type="password" class="form-control" placeholder="รหัสผ่านใหม่" required>
-                    <div class = "invalid-feedback">จำเป็น</div>
+                    <input id="pwd1" type="password" class="form-control" placeholder="รหัสผ่านใหม่" pattern="^(?=.*[A-Za-z])(?=.*\d)(?!.*\s).{6,}$" required>
+                    <div class = "invalid-feedback">ประกอบด้วยภาษาอังกฤษและตัวเลขอย่างน้อย 6 ตัวอักษร</div>
                 </div>
                 
             </div>
 
             <div class="row my-3">
                 <div class="col">
-                    <input id="pwd2" type="password" class="form-control" placeholder="ยืนยันรหัสผ่าน" required>
-                    <div class = "invalid-feedback">จำเป็น</div>
+                    <input id="pwd2" type="password" class="form-control" placeholder="ยืนยันรหัสผ่าน" pattern="^(?=.*[A-Za-z])(?=.*\d)(?!.*\s).{6,}$" required>
+                    <div class = "invalid-feedback">ประกอบด้วยภาษาอังกฤษและตัวเลขอย่างน้อย 6 ตัวอักษร</div>
                 </div>
                 
             </div> 
