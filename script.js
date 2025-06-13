@@ -208,10 +208,31 @@ var gId, gData, gUrl;
     document.getElementById('resp-spinner2').classList.add("d-none");
     document.getElementById('resp-spinner3').classList.add("d-none");
   } 
+
+  function trim_text(el) {
+    el.value = el.value.
+    replace(/(^\s*)|(\s*$)/gi, ""). // removes leading and trailing spaces
+    replace(/[ ]{2,}/gi, " "). // replaces multiple spaces with one space
+    replace(/\n +/, "\n"); // Removes spaces after newlines
+    return;
+  }
+
+  function letGoTrim(){
+    $(function(){
+      $("textarea").change(function(){
+        trim_text(this);
+      });
+
+      $("input:not(#img_input1)").change(function(){
+          trim_text(this);
+      });     
+    });
+  }
   
   document.addEventListener('DOMContentLoaded',function(){
       loadingStart()
       preventFormSubmit()
+      letGoTrim()
       const params = new URLSearchParams(window.location.search);
       const id = params.get("id");
 
